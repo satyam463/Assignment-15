@@ -169,14 +169,29 @@ Let V be a vector space over the field of complex numbers , and suppose there is
 \section{Isomorphism}
 \subsection{Properties}
 T : V $\rightarrow$ W is an isomorphism if
-
- (1) T is linear transformation.
  
- (2) T is one one.
+ (1) T is one one.
  
- (3) T is onto.
+ (2) T is onto.
 \section{Solution}
-Since T is an isomorphoism , 
+T is one one over $C^{3}$ if 
+\begin{align}
+    T\brak{\alpha}=0 \implies \alpha =0
+\end{align}
+now,
+\begin{align}
+ \myvec{1&-2&\sqrt{2}\\0&1+i&i\\i&0&3}\alpha = 0
+\end{align}
+consider the row reduced matrix
+\begin{align}
+    \myvec{1&-2&\sqrt{2}\\0&1+i&i\\i&0&3}
+    \xleftrightarrow[R_3\rightarrow i R_3]{R_3\rightarrow R_3-iR_1}\myvec{1&-2&\sqrt{2}\\0&1+i&i\\0&-2&\sqrt{2}+3i}\\
+    \xleftrightarrow[R_3\leftarrow R_3+R_2]{R_2\leftarrow (1-i)R_2}\myvec{1&-2&\sqrt{2}\\0&2&i+1\\0&0&\sqrt{2}+4i+1}
+\end{align}
+\begin{align}
+    \vec{\alpha} = \myvec{0\\0\\0}
+\end{align}
+Therefore it holds the condition of one one and the rank = no. of pivot columns = 3 (equal to no. of columns).Thus the  vectors are linearly independent hence it is onto . Since T is an isomorphoism , 
   \begin{align}
   T\brak{\alpha_1} = c_1T\brak{\alpha_2}+c_2T\brak{\alpha_3}  
 \end{align}
