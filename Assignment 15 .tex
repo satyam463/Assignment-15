@@ -162,7 +162,7 @@ https://github.com/satyam463/Assignment-15/blob/main/Assignment%2015.tex
 Let V be a vector space over the field of complex numbers , and suppose there is an isomorphism T of V onto $C^{3}$. Let $\alpha_1$ , $\alpha_2$ , $\alpha_3$  , $\alpha_4$ be vectors in V such that 
    \begin{multline}
     \begin{aligned}
-    T\brak{\alpha_1}=\myvec{1&0&i} , T\brak{\alpha_2}=\myvec{-2&1+i&0} ,\\ T\brak{\alpha_3}=\myvec{-1&1&1} , T\brak{\alpha_4}=\myvec{\sqrt{2}&i&3}
+    T\brak{\alpha_1}=\myvec{1\\0\\i} , T\brak{\alpha_2}=\myvec{-2\\1+i\\0} ,\\ T\brak{\alpha_3}=\myvec{-1\\1\\1} , T\brak{\alpha_4}=\myvec{\sqrt{2}\\i\\3}
     \end{aligned}
     \end{multline}
     Is $\alpha_1$ in the subspace spanned by $\alpha_2$ and $\alpha_3$.
@@ -174,6 +174,9 @@ T : V $\rightarrow$ W is an isomorphism if
  
  (2) T is onto.
 \section{Solution}
+\begin{align}
+\myvec{1&-2&-1&\sqrt{2}\\0&1+i&1&i\\i&0&1&3}\xrightarrow[]{ref}\myvec{1&0&-i&-3i\\0&2&1-i&i+1\\0&0&0&1}
+\end{align}
 T is one one over $C^{3}$ if 
 \begin{align}
     T\brak{\alpha}=0 \implies \alpha =0
@@ -191,13 +194,13 @@ consider the row reduced matrix
 \begin{align}
     \vec{\alpha} = \myvec{0\\0\\0}
 \end{align}
-Therefore it holds the condition of one one and the rank = no. of pivot columns = 3 (equal to no. of columns).Thus the  vectors are linearly independent hence it is onto . Since T is an isomorphoism , 
+Therefore it holds the condition of one one and the rank = no. of pivot columns = 3 (equal to no. of columns).Thus the  vectors are linearly independent hence it is onto . Since T is an isomorphoism onto $C^{3}$. 
   \begin{align}
-  T\brak{\alpha_1} = c_1T\brak{\alpha_2}+c_2T\brak{\alpha_3}  
+  T\brak{\alpha_1} = c_1T\brak{\alpha_2}+c_2T\brak{\alpha_3}\label{pr}  
 \end{align}
-$c_1$ and $c_2$ are scalar .
+$c_1$ and $c_2$ are scalar.
 \begin{align}
- \myvec{1&0&i}=c{_1}\myvec{-2&1+i&0}+c{_2}\myvec{-1&1&1}
+ \myvec{1\\0\\i}=c{_1}\myvec{-2\\1+i\\0}+c{_2}\myvec{-1\\1\\1}
 \end{align}
 \begin{align}
   \myvec{1\\0\\i}=\myvec{-2&-1\\1+i&1\\0&1}\myvec{c{_1}\\c{_2}}
@@ -214,8 +217,9 @@ Therefore the coordinate matrix of the vector is
     \myvec{c{_1}\\c{_2}}=
      \myvec{\frac{-1-i}{2}\\i}
 \end{align}
+substituting the $c_{i}$ in \refeq{pr}
 \begin{align}
-   T\brak{\alpha_1}=-\frac{1+i}{2}T\brak{\alpha_2}+iT\brak{\alpha_3} 
+   T\brak{\alpha_1}=-\frac{1+i}{2}T\brak{\alpha_2} +iT\brak{\alpha_3} 
 \end{align}
  Hence $\alpha_1$ belongs to the subspace spanned by $\alpha_2$
 and $\alpha_3$.
