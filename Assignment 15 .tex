@@ -172,7 +172,7 @@ be the ordered basis defined by
 \begin{align}
     \alpha_1 = \myvec{1 , i} , \alpha_2 = \myvec{-i , 2}
 \end{align}
-What is the matrix of T relative to the pair $\beta^{'}$ , $\beta$ ?
+What is the matrix of T relative to the pair $\beta$ , $\beta^{'}$?
 \section{Solution}
 Transformation T from $C^{2}$ to $C^{2}$. Let
 \begin{align}
@@ -188,19 +188,18 @@ T is defined by
    T\brak{\vec{x}} = \vec{A}\vec{x}\\
     T\brak{\vec{x}}=\myvec{1&0\\0&0}\vec{x}
 \end{align}
-consider $\beta^{'}$ under T
+To find relative matrix we will use row reduce augmented matrix.
 \begin{align}
-    T\brak{\vec{\alpha_1}}=\myvec{1&0\\0&0}\myvec{1\\i}=\myvec{1\\0}\\
-    T\brak{\vec{\alpha_2}}=\myvec{1&0\\0&0}\myvec{-i\\2}=\myvec{-i\\0}
+    \myvec{1&-i&1&0\\i&2&0&0}
 \end{align}
- we have to write $T\brak{\vec{\alpha_1}}$  and $T\brak{\vec{\alpha_2}}$  as linear combinations of $e_1$ , $e_2$
+\begin{align}
+\myvec{1&-i&1&0\\i&2&0&0}
+\xleftrightarrow[R_1\rightarrow R_1+iR_2]{R_2\rightarrow R_2-iR_1}
+\myvec{1&0&2&0\\0&1&-i&0}
+\end{align}
+ Therefore matrix of relative to the pair $\beta$ , $\beta^{'}$  
  \begin{align}
-     T\brak{\vec{\alpha_1}}= 1 e_1 + 0 e_2 \\
-      T\brak{\vec{\alpha_2}}= -i e_1 + 0 e_2
- \end{align}
- Therefore matrix of relative to the pair $\beta^{'}$ , $\beta$  
- \begin{align}
-  T\brak{\vec{\beta^{'}}}=\myvec{1&-i\\0&0}\vec{\beta}   
+  T\brak{\vec{\beta}}=\myvec{2&0\\-i&0}\vec{\beta^{'}}   
  \end{align}
 \end{document}
 
